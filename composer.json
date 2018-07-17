@@ -1,7 +1,7 @@
 {
-    "name": "sylius/plugin-skeleton",
+    "name": "solutiondrive/sylius-backendsecurity-through-obscurity-plugin",
     "type": "sylius-plugin",
-    "description": "Acme example plugin for Sylius.",
+    "description": "Plugin for Sylius that does NOT provide any security and only hides some menu elements",
     "license": "MIT",
     "require": {
         "php": "^7.1",
@@ -32,17 +32,12 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "Acme\\SyliusExamplePlugin\\": "src/",
-            "Tests\\Acme\\SyliusExamplePlugin\\": "tests/"
+            "solutionDrive\\SyliusBackendSecurityThroughObscurityPlugin\\": "src/",
+            "Tests\\solutionDrive\\SyliusBackendSecurityThroughObscurityPlugin\\": "tests/"
         }
     },
     "autoload-dev": {
         "classmap": ["tests/Application/app/AppKernel.php"]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.2-dev"
-        }
     },
     "config": {
         "bin-dir": "bin"
