@@ -1,12 +1,21 @@
+Sylius BackendSecurity Through Obscurity Plugin
+===============================================
+
+This plugin does NOT provide any security!
+
+It only hides specific menu points in the backend for defined set of roles.
+But if a person knows the urls the sites are still accessable.
+
+To really manage access for some roles we recommend to have a look at 
+[Sylius Access Control Layer Plugin from bitbag](https://bitbag.shop/products/sylius-access-control-layer)
+
+This plugin is for sylius
 <p align="center">
     <a href="https://sylius.com" target="_blank">
-        <img src="https://demo.sylius.com/assets/shop/img/logo.png" />
+        <img height="50" src="https://demo.sylius.com/assets/shop/img/logo.png" />
     </a>
 </p>
 
-<h1 align="center">Plugin Skeleton</h1>
-
-<p align="center">Skeleton for starting Sylius plugins.</p>
 
 ## Installation
 
