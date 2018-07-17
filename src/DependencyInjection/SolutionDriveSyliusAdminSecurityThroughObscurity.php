@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace solutionDrive\SyliusBackendSecurityThroughObscurityPlugin\DependencyInjection;
+namespace solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
-final class SolutionDriveSyliusBackendSecurityThroughObscurity extends Extension
+final class SolutionDriveSyliusAdminSecurityThroughObscurity extends Extension
 {
     /**
      * {@inheritdoc}

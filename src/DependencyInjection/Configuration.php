@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace solutionDrive\SyliusBackendSecurityThroughObscurityPlugin\DependencyInjection;
+namespace solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace solutionDrive\SyliusBackendSecurityThroughObscurityPlugin;
+namespace solutionDrive\SyliusAdminSecurityThroughObscurityPlugin;
 
 use Sylius\Bundle\CoreBundle\Application\SyliusPluginTrait;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class SolutionDriveSyliusBackendSecurityThroughObscurityPlugin extends Bundle
+final class SolutionDriveSyliusAdminSecurityThroughObscurityPlugin extends Bundle
 {
     use SyliusPluginTrait;
 }

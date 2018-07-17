@@ -32,8 +32,8 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "solutionDrive\\SyliusBackendSecurityThroughObscurityPlugin\\": "src/",
-            "Tests\\solutionDrive\\SyliusBackendSecurityThroughObscurityPlugin\\": "tests/"
+            "solutionDrive\\SyliusAdminSecurityThroughObscurityPlugin\\": "src/",
+            "Tests\\solutionDrive\\SyliusAdminSecurityThroughObscurityPlugin\\": "tests/"
         }
     },
     "autoload-dev": {
