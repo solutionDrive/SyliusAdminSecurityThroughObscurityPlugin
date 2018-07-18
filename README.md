@@ -25,6 +25,7 @@ This plugin is for sylius
   - `test` environment:
 
     ```bash
+    $ composer install
     $ (cd tests/Application && yarn install)
     $ (cd tests/Application && yarn run gulp)
     $ (cd tests/Application && bin/console assets:install web -e test)
@@ -36,6 +37,7 @@ This plugin is for sylius
   - `dev` environment:
 
     ```bash
+    $ composer install
     $ (cd tests/Application && yarn install)
     $ (cd tests/Application && yarn run gulp)
     $ (cd tests/Application && bin/console assets:install web -e dev)
