@@ -1,0 +1,4 @@
+suites:
+    main:
+        namespace: solutionDrive\SyliusAdminSecurityThroughObscurityPlugin
+        psr4_prefix: solutionDrive\SyliusAdminSecurityThroughObscurityPlugin
