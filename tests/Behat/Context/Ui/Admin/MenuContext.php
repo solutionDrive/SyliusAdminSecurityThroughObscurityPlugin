@@ -35,7 +35,7 @@ class MenuContext implements Context
     public function iShouldSeeMenuEntry($menuValue)
     {
         $menuEntry = $this->menuPage->getMenuEntryByValue($menuValue);
-        Assert::notNull($menuEntry);
+        Assert::notNull($menuEntry, "Could not find the menu entry '${menuValue}'");
     }
 }
 
