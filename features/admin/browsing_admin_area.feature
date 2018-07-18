@@ -12,8 +12,9 @@ Feature: Browsing admin area
             - SECURITY_EXPERT
           hidden_menus:
             SECURITY_EXPERT:
-              - catalog
-              - configuration
+              - catalog: ~
+              - configuration:
+                - administrators
         """
 
   @ui
@@ -49,4 +50,5 @@ Feature: Browsing admin area
      When I am logged in as "security_is_important@example.com" administrator
       And I open administration dashboard
      Then I should not see "Catalog" menu entry
-      And I should not see "Configuration" menu entry
+      And I should see "Configuration" menu entry
+      And I should not see "Configuration->Administrators" menu entry
