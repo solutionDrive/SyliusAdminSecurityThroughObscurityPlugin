@@ -14,6 +14,6 @@ use Sylius\Behat\Page\SymfonyPageInterface;
 
 interface MenuPageInterface  extends SymfonyPageInterface
 {
-    public function getMenuEntryByValue(string $menuValue): NodeElement;
+    public function getMenuEntryByValue(string $menuValue): ?NodeElement;
 }
 

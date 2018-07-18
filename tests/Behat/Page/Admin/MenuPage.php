@@ -28,7 +28,7 @@ class MenuPage extends SymfonyPage implements MenuPageInterface
         return 'sylius_admin_dashboard';
     }
 
-    public function getMenuEntryByValue(string $menuValue): NodeElement
+    public function getMenuEntryByValue(string $menuValue): ?NodeElement
     {
         $menuEntry = null;
         try {
