@@ -7,9 +7,13 @@ default:
                 - sylius.behat.context.hook.doctrine_orm
 
                 - sylius.behat.context.setup.admin_security
+                - sylius.behat.context.setup.admin_user
                 - sylius.behat.context.setup.channel
 
                 - sylius.behat.context.ui.admin.dashboard
+
+                - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.config
+                - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.admin
 
                 - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.ui.admin.menu
             filters:
