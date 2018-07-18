@@ -1,4 +1,4 @@
-Sylius BackendSecurity Through Obscurity Plugin
+Sylius AdminSecurity Through Obscurity Plugin
 ===============================================
 
 This plugin does NOT provide any security!

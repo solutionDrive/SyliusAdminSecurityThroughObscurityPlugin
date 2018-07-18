@@ -1,5 +1,5 @@
 {
-    "name": "solutiondrive/sylius-backendsecurity-through-obscurity-plugin",
+    "name": "solutiondrive/sylius-adminsecurity-through-obscurity-plugin",
     "type": "sylius-plugin",
     "description": "Plugin for Sylius that does NOT provide any security and only hides some menu elements",
     "license": "MIT",
