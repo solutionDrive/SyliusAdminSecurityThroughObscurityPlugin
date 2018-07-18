@@ -15,7 +15,20 @@ final class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder(): TreeBuilder
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('solutiondrive_sylius_adminsecurity_through_obscurity_plugin');
+        $rootNode = $treeBuilder->root('solutiondrive_sylius_adminsecurity_through_obscurity');
+
+        $rootNode
+            ->children()
+                ->arrayNode('additional_admin_roles')
+                    ->info('Describes which additional roles should be available for administrators')
+                ->end()
+                ->arrayNode('hidden_menus')
+                    ->info('Describes which menus should be hidden for a specific role')
+                    ->arrayPrototype()
+                        ->scalarPrototype()
+                        ->end()
+                ->end()
+            ->end();
 
         return $treeBuilder;
     }
