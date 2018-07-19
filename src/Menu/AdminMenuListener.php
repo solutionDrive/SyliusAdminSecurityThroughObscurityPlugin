@@ -53,44 +53,6 @@ final class AdminMenuListener
                 }
             }
         }
-
-        // TODO: hide menus based on user role
-//        $hiddenSettings = [
-//            'catalog' => [
-//                'association_types',
-//            ],
-//            'customers' => [
-//                'groups',
-//            ],
-//            'marketing',
-//            'configuration' => [
-//                'channels',
-//                'countries',
-//                'currencies',
-//                'exchange_rates',
-//                'locales',
-//                'payment_methods',
-//                'shipping_categories',
-//                'shipping_methods',
-//                'tax_categories',
-//                'tax_rates',
-//                'zones',
-//            ],
-//        ];
-//
-//        foreach ($hiddenSettings as $key => $mainMenuEntry) {
-//            if (is_array($mainMenuEntry)) {
-//                foreach ($mainMenuEntry as $subMenuEntry) {
-//                    $menu->getChild($key)->removeChild($subMenuEntry);
-//                }
-//            } else {
-//                $menu->removeChild($mainMenuEntry);
-//            }
-//        }
-//
-//        $menu->getChild('configuration')
-//            ->addChild('internal_order_reasons', ['route' => 'app_admin_internal_order_reason_index'])
-//            ->setLabel('app.ui.internal_order_reasons');
     }
 }
 
