@@ -26,6 +26,7 @@ final class Configuration implements ConfigurationInterface
                 ->end()
                 ->arrayNode('hidden_menus')
                     ->info('Describes which menus should be hidden for a specific role')
+                    ->useAttributeAsKey('role', true)
                     ->arrayPrototype()
                         ->arrayPrototype()
                             ->scalarPrototype()
