@@ -15,7 +15,6 @@ default:
                 - sylius.behat.context.ui.admin.dashboard
 
                 - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.admin
-                - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.menu
 
                 - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.ui.admin.menu
             filters:

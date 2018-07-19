@@ -11,12 +11,6 @@
             <tag name="fob.context_service" />
         </service>
         <service
-                id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.menu"
-                class="Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Context\Setup\MenuContext"
-        >
-            <tag name="fob.context_service" />
-        </service>
-        <service
                 id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.admin"
                 class="Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Context\Setup\AdminContext"
         >

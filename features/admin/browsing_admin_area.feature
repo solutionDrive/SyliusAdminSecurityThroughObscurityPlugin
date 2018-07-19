@@ -6,9 +6,7 @@ Feature: Browsing admin area
 
   Background:
     Given the store operates on a single channel in "United States"
-      And there is an admin role "SECURITY_EXPERT"
-      And with this role the main menu "catalog" is hidden
-      And with this role the menu entry "administrators" of main menu "configuration" is hidden
+          # the config under tests/Application/app/config/config.yml configures the plugin
 
   @ui
   Scenario: Browsing admin area with default admin role to see main menu
