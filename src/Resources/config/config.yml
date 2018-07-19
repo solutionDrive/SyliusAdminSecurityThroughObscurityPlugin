@@ -1,0 +1,4 @@
+---
+solution_drive_sylius_admin_security_through_obscurity:
+    additional_admin_roles: ~
+    hidden_menus: ~

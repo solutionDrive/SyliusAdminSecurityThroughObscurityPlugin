@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 
-final class SolutionDriveSyliusAdminSecurityThroughObscurity extends Extension
+final class SolutionDriveSyliusAdminSecurityThroughObscurityExtension extends Extension
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ final class SolutionDriveSyliusAdminSecurityThroughObscurity extends Extension
     public function load(array $config, ContainerBuilder $container): void
     {
         $config = $this->processConfiguration($this->getConfiguration([], $container), $config);
-        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
 
+        $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
     }
 }
