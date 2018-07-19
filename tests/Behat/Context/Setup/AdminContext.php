@@ -50,5 +50,20 @@ class AdminContext implements Context
         $this->userRepository->add($adminUser);
         $this->sharedStorage->set('administrator', $adminUser);
     }
+
+    /**
+     * @Given /^there is an admin role "([^"]*)"$/
+     */
+    public function thereIsAnAdminRole($roleName)
+    {
+        $roles = [];
+        if (true === $this->sharedStorage->has('roles')) {
+            $roles = $this->sharedStorage->get('roles');
+        }
+        if (false === in_array($roleName, $roles)) {
+            $roles[] = $roleName;
+        }
+        $this->sharedStorage->set('roles', $roles);
+    }
 }
 

@@ -6,16 +6,9 @@ Feature: Browsing admin area
 
   Background:
     Given the store operates on a single channel in "United States"
-      And the store has a "solutiondrive_sylius_adminsecurity_through_obscurity_plugin" configuration:
-        """
-          additional_admin_roles:
-            - SECURITY_EXPERT
-          hidden_menus:
-            SECURITY_EXPERT:
-              - catalog: ~
-              - configuration:
-                - administrators
-        """
+      And there is an admin role "SECURITY_EXPERT"
+      And with this role the main menu "catalog" is hidden
+      And with this role the menu entry "administrators" of main menu "configuration" is hidden
 
   @ui
   Scenario: Browsing admin area with default admin role to see main menu
@@ -43,7 +36,7 @@ Feature: Browsing admin area
      And I should see "Configuration->Locales" menu entry
      And I should see "Configuration->Administrators" menu entry
 
-  @ui @todo
+  @ui
   Scenario: Browsing admin area with SECURITY_EXPERT admin role
     Given there is an administrator "security_is_important@example.com"
       And this administrator has the role "SECURITY_EXPERT"
