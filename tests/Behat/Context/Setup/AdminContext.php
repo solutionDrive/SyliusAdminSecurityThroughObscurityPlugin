@@ -39,7 +39,7 @@ class AdminContext implements Context
     }
 
     /**
-     * @Given /^(this administrator) has the (role "[^"]+")$/
+     * @Given /^(this administrator) has the role "([^"]+)"$/
      */
     public function thisAdministratorHasTheRole(
         AdminUserInterface $adminUser,

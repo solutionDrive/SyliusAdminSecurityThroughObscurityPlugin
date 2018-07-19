@@ -2,6 +2,13 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- Put your services here -->
+        <service
+                id="solutiondrive.syliusadminsecuritythroughobscurityplugin.listener.admin.menu_builder"
+                class="solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Menu\AdminMenuListener"
+        >
+            <argument>%solution_drive_sylius_admin_security_through_obscurity.hidden_menus%</argument>
+            <argument type="expression">service('security.token_storage').getToken().getUser()</argument>
+            <tag name="kernel.event_listener" event="sylius.menu.admin.main" method="adjustAdminMenu" />
+        </service>
     </services>
 </container>
