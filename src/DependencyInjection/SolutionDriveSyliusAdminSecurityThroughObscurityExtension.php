@@ -20,5 +20,8 @@ final class SolutionDriveSyliusAdminSecurityThroughObscurityExtension extends Ex
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.xml');
+
+        $container->setParameter('solution_drive_sylius_admin_security_through_obscurity.additional_admin_roles', $config['additional_admin_roles']);
+        $container->setParameter('solution_drive_sylius_admin_security_through_obscurity.hidden_menus', $config['hidden_menus']);
     }
 }
