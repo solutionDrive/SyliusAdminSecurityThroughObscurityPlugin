@@ -10,15 +10,45 @@ declare(strict_types=1);
 namespace Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Context\Setup;
 
 use Behat\Behat\Context\Context;
+use Sylius\Behat\Service\SharedStorageInterface;
+use Sylius\Component\Core\Model\AdminUserInterface;
+use Sylius\Component\User\Repository\UserRepositoryInterface;
 
 class AdminContext implements Context
 {
     /**
-     * @Given this administrator has the role :roleName
+     * @var SharedStorageInterface
      */
-    public function thisAdministratorHasTheRole($roleName)
-    {
+    private $sharedStorage;
 
+    /**
+     * @var UserRepositoryInterface
+     */
+    private $userRepository;
+
+    /**
+     * @param SharedStorageInterface $sharedStorage
+     * @param UserRepositoryInterface $userRepository
+     */
+    public function __construct(
+        SharedStorageInterface $sharedStorage,
+        UserRepositoryInterface $userRepository
+    ) {
+        $this->sharedStorage = $sharedStorage;
+        $this->userRepository = $userRepository;
+    }
+
+    /**
+     * @Given /^(this administrator) has the (role "[^"]+")$/
+     */
+    public function thisAdministratorHasTheRole(
+        AdminUserInterface $adminUser,
+        $roleName
+    ) {
+        $adminUser->addRole($roleName);
+
+        $this->userRepository->add($adminUser);
+        $this->sharedStorage->set('administrator', $adminUser);
     }
 }
 

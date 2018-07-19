@@ -20,6 +20,8 @@
                 id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.setup.admin"
                 class="Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Context\Setup\AdminContext"
         >
+            <argument type="service" id="sylius.behat.shared_storage" />
+            <argument type="service" id="__symfony__.sylius.repository.admin_user" />
             <tag name="fob.context_service" />
         </service>
 
