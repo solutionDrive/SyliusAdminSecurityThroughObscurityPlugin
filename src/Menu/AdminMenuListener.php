@@ -35,6 +35,25 @@ final class AdminMenuListener
     {
         $menu = $event->getMenu();
 
+        if (true === empty($this->hiddenMenusConfig)) {
+            return;
+        }
+
+        $userRoles = $this->user->getRoles();
+        foreach ($userRoles as $roleName) {
+            if (true === isset($this->hiddenMenusConfig[$roleName])) {
+                foreach ($this->hiddenMenusConfig[$roleName] as $mainMenuEntry => $menuEntries) {
+                    if (0 < count($menuEntries)) {
+                        foreach ($menuEntries as $menuEntry) {
+                            $menu->getChild($mainMenuEntry)->removeChild($menuEntry);
+                        }
+                    } else {
+                        $menu->removeChild($mainMenuEntry);
+                    }
+                }
+            }
+        }
+
         // TODO: hide menus based on user role
 //        $hiddenSettings = [
 //            'catalog' => [

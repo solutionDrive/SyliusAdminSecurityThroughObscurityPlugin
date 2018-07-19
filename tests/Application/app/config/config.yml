@@ -80,6 +80,6 @@ solution_drive_sylius_admin_security_through_obscurity:
         SECURITY_EXPERT:
             catalog: ~
             configuration:
-                - administrators
+                - admin_users
                 - channels
         SOMEONE: ~
