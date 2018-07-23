@@ -76,10 +76,10 @@ liip_imagine:
 solution_drive_sylius_admin_security_through_obscurity:
     additional_admin_roles:
         - SECURITY_EXPERT
+        - ONLY_A_EXPERT
     hidden_menus:
         SECURITY_EXPERT:
             catalog: ~
             configuration:
                 - admin_users
                 - channels
-        SOMEONE: ~
