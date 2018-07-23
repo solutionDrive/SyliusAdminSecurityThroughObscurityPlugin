@@ -51,6 +51,7 @@ final class AdminMenuListener
 
     private function hideMenuEntries(ItemInterface $menu, $menusToHide)
     {
+        # TODO: Clean up this method! Perhaps an own service?
         foreach ($menusToHide as $menuData) {
             foreach ($menuData as $mainMenuEntryName => $menuEntryNames) {
                 if (0 < count($menuEntryNames)) {
