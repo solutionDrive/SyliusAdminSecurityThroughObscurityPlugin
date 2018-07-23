@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Menu;
 
+use Knp\Menu\ItemInterface;
 use Sylius\Bundle\UiBundle\Menu\Event\MenuBuilderEvent;
 use Sylius\Component\User\Model\UserInterface;
 
@@ -39,20 +40,28 @@ final class AdminMenuListener
             return;
         }
 
-        $userRoles = $this->user->getRoles();
-        foreach ($userRoles as $roleName) {
-            if (true === isset($this->hiddenMenusConfig[$roleName])) {
-                foreach ($this->hiddenMenusConfig[$roleName] as $mainMenuEntryName => $menuEntryNames) {
-                    if (0 < count($menuEntryNames)) {
-                        foreach ($menuEntryNames as $menuEntryName) {
-                            $menuEntry = $menu->getChild($mainMenuEntryName);
-                            if (null !== $menuEntry) {
-                                $menuEntry->removeChild($menuEntryName);
-                            }
+        $userRoles = array_flip($this->user->getRoles());
+        $menusToHide = array_intersect_key($this->hiddenMenusConfig, $userRoles);
+        if (true === empty($menusToHide)) {
+            return;
+        }
+
+        $this->hideMenuEntries($menu, $menusToHide);
+    }
+
+    private function hideMenuEntries(ItemInterface $menu, $menusToHide)
+    {
+        foreach ($menusToHide as $menuData) {
+            foreach ($menuData as $mainMenuEntryName => $menuEntryNames) {
+                if (0 < count($menuEntryNames)) {
+                    foreach ($menuEntryNames as $menuEntryName) {
+                        $menuEntry = $menu->getChild($mainMenuEntryName);
+                        if (null !== $menuEntry) {
+                            $menuEntry->removeChild($menuEntryName);
                         }
-                    } else {
-                        $menu->removeChild($mainMenuEntryName);
                     }
+                } else {
+                    $menu->removeChild($mainMenuEntryName);
                 }
             }
         }
