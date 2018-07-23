@@ -42,13 +42,16 @@ final class AdminMenuListener
         $userRoles = $this->user->getRoles();
         foreach ($userRoles as $roleName) {
             if (true === isset($this->hiddenMenusConfig[$roleName])) {
-                foreach ($this->hiddenMenusConfig[$roleName] as $mainMenuEntry => $menuEntries) {
-                    if (0 < count($menuEntries)) {
-                        foreach ($menuEntries as $menuEntry) {
-                            $menu->getChild($mainMenuEntry)->removeChild($menuEntry);
+                foreach ($this->hiddenMenusConfig[$roleName] as $mainMenuEntryName => $menuEntryNames) {
+                    if (0 < count($menuEntryNames)) {
+                        foreach ($menuEntryNames as $menuEntryName) {
+                            $menuEntry = $menu->getChild($mainMenuEntryName);
+                            if (null !== $menuEntry) {
+                                $menuEntry->removeChild($menuEntryName);
+                            }
                         }
                     } else {
-                        $menu->removeChild($mainMenuEntry);
+                        $menu->removeChild($mainMenuEntryName);
                     }
                 }
             }
