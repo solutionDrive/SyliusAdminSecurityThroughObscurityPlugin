@@ -51,4 +51,3 @@ class AdminContext implements Context
         $this->sharedStorage->set('administrator', $adminUser);
     }
 }
-
