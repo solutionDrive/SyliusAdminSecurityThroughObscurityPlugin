@@ -16,4 +16,3 @@ interface MenuPageInterface  extends SymfonyPageInterface
 {
     public function getMenuEntryByValue(string $menuValue): ?NodeElement;
 }
-

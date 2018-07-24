@@ -38,4 +38,3 @@ class MenuContext implements Context
         Assert::notNull($menuEntry, "Could not find the menu entry '${menuValue}'");
     }
 }
-
