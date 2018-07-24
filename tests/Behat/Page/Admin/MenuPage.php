@@ -15,13 +15,13 @@ use Sylius\Behat\Page\SymfonyPage;
 
 class MenuPage extends SymfonyPage implements MenuPageInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     private const MAIN_ENTRY = 'div.menu div.item div.header';
 
     private const SUB_ENTRY = 'div.menu a.item';
 
+    /**
+     * {@inheritdoc}
+     */
     public function getRouteName()
     {
         # The menu does not have an own route
