@@ -2,6 +2,20 @@
 
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
-        <!-- Put your Behat services here -->
+        <service
+                id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.ui.admin.menu"
+                class="Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Context\Ui\Admin\MenuContext"
+        >
+            <argument type="service" id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.page.admin.menu" />
+            <tag name="fob.context_service" />
+        </service>
+        <service
+                id="solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.page.admin.menu"
+                class="Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Page\Admin\MenuPage"
+        >
+            <argument type="service" id="mink.default_session" />
+            <argument>%__behat__.mink.parameters%</argument>
+            <argument type="service" id="__symfony_shared__.router" />
+        </service>
     </services>
 </container>

@@ -2,3 +2,15 @@
 
 default:
     suites:
+        ui_admin_browsing_admin_area:
+            contexts_services:
+                - sylius.behat.context.hook.doctrine_orm
+
+                - sylius.behat.context.setup.admin_security
+                - sylius.behat.context.setup.channel
+
+                - sylius.behat.context.ui.admin.dashboard
+
+                - solutiondrive.syliusadminsecuritythroughobscurityplugin.behat.context.ui.admin.menu
+            filters:
+                tags: "@browsing_admin_area && @ui"
