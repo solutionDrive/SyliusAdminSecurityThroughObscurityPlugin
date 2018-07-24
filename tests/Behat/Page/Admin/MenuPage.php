@@ -42,12 +42,12 @@ class MenuPage extends SymfonyPage implements MenuPageInterface
     protected function getDefinedElements()
     {
         $catalogMenuElements = [
-            'Catalog'                       => self::MAIN_ENTRY . ':contains("Catalog")',
-            'Catalog->Taxons'               => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Taxons")',
-            'Catalog->Products'             => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Products")',
-            'Catalog->Inventory'            => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Inventory")',
-            'Catalog->Attributes'           => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Attributes")',
-            'Catalog->Options'              => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Options")',
+            'Catalog'               => self::MAIN_ENTRY . ':contains("Catalog")',
+            'Catalog->Taxons'       => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Taxons")',
+            'Catalog->Products'     => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Products")',
+            'Catalog->Inventory'    => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Inventory")',
+            'Catalog->Attributes'   => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Attributes")',
+            'Catalog->Options'      => self::MAIN_ENTRY . ':contains("Catalog") + ' . self::SUB_ENTRY . ':contains("Options")',
         ];
 
         $salesMenuElements = [
