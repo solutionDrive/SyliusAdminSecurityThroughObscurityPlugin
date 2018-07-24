@@ -21,7 +21,6 @@ class MenuContext implements Context
 
     /**
      * @param MenuPageInterface $menuPage
-     *
      */
     public function __construct(
         MenuPageInterface $menuPage
