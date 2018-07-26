@@ -16,14 +16,10 @@ use Sylius\Component\User\Repository\UserRepositoryInterface;
 
 class AdminContext implements Context
 {
-    /**
-     * @var SharedStorageInterface
-     */
+    /** @var SharedStorageInterface */
     private $sharedStorage;
 
-    /**
-     * @var UserRepositoryInterface
-     */
+    /** @var UserRepositoryInterface */
     private $userRepository;
 
     /**

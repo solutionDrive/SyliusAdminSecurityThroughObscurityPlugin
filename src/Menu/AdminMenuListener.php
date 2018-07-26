@@ -49,7 +49,10 @@ final class AdminMenuListener
         $this->hideMenuEntries($menu, $menusToHide);
     }
 
-    private function hideMenuEntries(ItemInterface $menu, $menusToHide)
+    /**
+     * @param mixed[] $menusToHide
+     */
+    private function hideMenuEntries(ItemInterface $menu, array $menusToHide): void
     {
         # TODO: Clean up this method! Perhaps an own service?
         foreach ($menusToHide as $menuData) {
