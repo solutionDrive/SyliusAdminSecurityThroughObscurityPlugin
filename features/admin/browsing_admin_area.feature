@@ -7,6 +7,7 @@ Feature: Browsing admin area
   Background:
     Given the store operates on a single channel in "United States"
 
+    # ADDITIONAL HINTS:
     # the config under tests/Application/app/config/config.yml configures the plugin
     # There are 2 additional roles: SECURITY_EXPERT and ONLY_A_EXPERT
     # The hidden menus for SECURITY_EXPERT are the main menu 'Catalog'
