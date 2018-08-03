@@ -16,6 +16,25 @@ This plugin is for sylius
     </a>
 </p>
 
+## Configuration
+
+Get a full list of configuration: `bin/console config:dump-reference solution_drive_sylius_admin_security_through_obscurity`
+
+Example:
+
+```yaml
+solution_drive_sylius_admin_security_through_obscurity:
+    additional_admin_roles:
+        - ROLE1
+        - ROLE2
+    hidden_menus:
+        ROLE1:
+            configuration: ~
+        ROLE2:
+            catalog:
+              - products
+```
+
 ## Usage
 
 ### Preparation

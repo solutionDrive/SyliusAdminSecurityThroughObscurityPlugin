@@ -36,4 +36,13 @@ class MenuContext implements Context
         $menuEntry = $this->menuPage->getMenuEntryByValue($menuValue);
         Assert::notNull($menuEntry, "Could not find the menu entry '${menuValue}'");
     }
+
+    /**
+     * @Then I should not see :menuValue menu entry
+     */
+    public function iShouldNotSeeMenuEntry($menuValue)
+    {
+        $menuEntry = $this->menuPage->getMenuEntryByValue($menuValue);
+        Assert::null($menuEntry, "Found menu entry '${menuValue}' which should not be available");
+    }
 }
