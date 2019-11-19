@@ -4,10 +4,10 @@
     "description": "Plugin for Sylius that does NOT provide any security and only hides some menu elements",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
 
         "sylius/sylius": "~1.2.3",
-        "symfony/symfony": "^3.4|^4.1"
+        "symfony/symfony": "^4.3"
     },
     "require-dev": {
         "behat/behat": "^3.4",
