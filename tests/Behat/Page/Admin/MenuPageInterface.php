@@ -10,7 +10,7 @@ declare(strict_types=1);
 namespace Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Page\Admin;
 
 use Behat\Mink\Element\NodeElement;
-use Sylius\Behat\Page\SymfonyPageInterface;
+use FriendsOfBehat\PageObjectExtension\Page\SymfonyPageInterface;
 
 interface MenuPageInterface  extends SymfonyPageInterface
 {
