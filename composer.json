@@ -4,10 +4,10 @@
     "description": "Plugin for Sylius that does NOT provide any security and only hides some menu elements",
     "license": "MIT",
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
 
-        "sylius/sylius": "~1.2.3",
-        "symfony/symfony": "^3.4|^4.1"
+        "sylius/sylius": "~1.2.11",
+        "symfony/symfony": "^4.3"
     },
     "require-dev": {
         "behat/behat": "^3.4",
@@ -17,6 +17,7 @@
         "behat/mink-selenium2-driver": "^1.3",
         "friends-of-behat/context-service-extension": "^1.2",
         "friends-of-behat/cross-container-extension": "^1.1",
+        "friends-of-behat/page-object-extension": "^0.3.0",
         "friends-of-behat/service-container-extension": "^1.0",
         "friends-of-behat/symfony-extension": "^1.2.1",
         "friends-of-behat/variadic-extension": "^1.1",
@@ -40,6 +41,7 @@
         "classmap": ["tests/Application/app/AppKernel.php"]
     },
     "config": {
+        "sort-packages": true,
         "bin-dir": "bin"
     }
 }

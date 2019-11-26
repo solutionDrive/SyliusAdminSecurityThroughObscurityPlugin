@@ -11,7 +11,7 @@ namespace Tests\solutionDrive\SyliusAdminSecurityThroughObscurityPlugin\Behat\Pa
 
 use Behat\Mink\Element\NodeElement;
 use Behat\Mink\Exception\ElementNotFoundException;
-use Sylius\Behat\Page\SymfonyPage;
+use FriendsOfBehat\PageObjectExtension\Page\SymfonyPage;
 
 class MenuPage extends SymfonyPage implements MenuPageInterface
 {
@@ -22,7 +22,7 @@ class MenuPage extends SymfonyPage implements MenuPageInterface
     /**
      * {@inheritdoc}
      */
-    public function getRouteName()
+    public function getRouteName(): string
     {
         # The menu does not have an own route
         return 'sylius_admin_dashboard';
@@ -39,7 +39,7 @@ class MenuPage extends SymfonyPage implements MenuPageInterface
         return $menuEntry;
     }
 
-    protected function getDefinedElements()
+    protected function getDefinedElements(): array
     {
         $catalogMenuElements = [
             'Catalog'               => self::MAIN_ENTRY . ':contains("Catalog")',
