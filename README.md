@@ -105,3 +105,19 @@ solution_drive_sylius_admin_security_through_obscurity:
         ```bash
         $ bin/behat --tags="@javascript"
         ```
+
+### Opening Sylius with your plugin
+
+- Using `test` environment:
+
+    ```bash
+    $ (cd tests/Application && bin/console sylius:fixtures:load -e test)
+    $ (cd tests/Application && bin/console server:run -d public -e test)
+    ```
+    
+- Using `dev` environment:
+
+    ```bash
+    $ (cd tests/Application && bin/console sylius:fixtures:load -e dev)
+    $ (cd tests/Application && bin/console server:run -d public -e dev)
+    ```
